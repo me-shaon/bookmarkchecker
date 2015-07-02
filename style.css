@@ -1,0 +1,88 @@
+body {
+	width: 480px;
+	overflow-x: hidden;
+	background-color: #333333;
+	margin: 20px;
+}
+
+p{
+	color: #eee;
+	font-size: 16px;
+}
+.row {
+  background-color: #1D1D1D;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 5px;
+  word-break: break-all;
+  transition-property: margin-left;
+  transition-duration: .5s;
+}
+.row:hover{
+  margin-left: 25px;
+}
+a{
+  color: #5FAA77;
+  text-decoration: none;  
+  font-size: 16px;
+}
+     
+
+.button, .button:visited {
+	background: #222 url(overlay.png) repeat-x; 
+	display: inline-block; 
+	padding: 3px 5px 3px; 
+	margin-top: 10px;
+	color: #141414; 
+	text-decoration: none;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+	left: 70%;
+	border-radius: 10px;
+	transition-property: color;
+	transition-duration: .5s;
+}
+.button:hover                               			{ background-color: #111; color: #fff; }
+.button:active                              			{ top: 1px; }
+.small.button, .small.button:visited        { font-size: 12px; }
+.red.button, .red.button:visited            	{ background-color: #e62727; }
+.red.button:hover			                	{ background-color: #cf2525; }
+
+
+
+/*tooltip*/
+.tooltip {
+    display: inline;
+    position: relative;
+}
+
+.tooltip:hover:after {
+    background: #111;
+    background: rgba(0,0,0,.8);
+    border-radius: .5em;
+    bottom: 1.35em;
+    color: #eee;
+    content: attr(href);
+    display: block;
+    left: 1em;
+    padding: .3em 1em;
+    position: absolute;
+    text-shadow: 0 1px 0 #000;
+    white-space: nowrap;
+    z-index: 98;
+}
+
+.tooltip:hover:before {
+    border: solid;
+    border-color: #111 transparent;
+    border-color: rgba(0,0,0,.8) transparent;
+    border-width: .4em .4em 0 .4em;
+    bottom: 1em;
+    content: "";
+    display: block;
+    left: 2em;
+    position: absolute;
+    z-index: 99;
+}
