@@ -7,14 +7,6 @@ function url_domain(data)
 	return a.hostname;
 }
 
-//If no results found show the message
-function no_result()
-{
-	var txt= document.createElement('p');
-	txt.innerText="No Bookmark from this domain.";
-	div.appendChild(txt);
-}
-
 function myFunction(tab) 
 {
   var domainname = url_domain(tab.url);
@@ -24,7 +16,9 @@ function myFunction(tab)
         //If no results found 
 		if(results.length<=0)
         {
-            no_result();
+            var txt= document.createElement('p');
+			txt.innerText="No Bookmark from this domain.";
+			div.appendChild(txt);
             return;
         }
   
@@ -74,7 +68,9 @@ function myFunction(tab)
 		//If all results skipped by the custom filtering 
 		if(filter_result<=0)
         {
-            no_result();
+            var txt= document.createElement('p');
+			txt.innerText="No Bookmark from this domain.";
+			div.appendChild(txt);
         }
   });
 }
